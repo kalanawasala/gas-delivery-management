@@ -64,7 +64,7 @@ follows.
     
     php artisan migrate
     (this will create necessry tables on the database using migrations tables)
-<h2>STEP-07</h2> To run the Laravel development server, use the following command:
+<h2>STEP-08</h2> To run the Laravel development server, use the following command:
     
     php artisan serve
 <h4>After successfully following above steps, you can quickly get the project up and running in your local development environment </h4>

@@ -21,46 +21,52 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+<h1>Gas Delivery Management System </h1>
+    
+    This is the our first project that developed using laravel framework.The purpose of the application 
+    is to handle the Local Gas Delivery managemnt events smoothly .
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+<h2>How to install</h1>
+<h2>STEP-01</h2> You Should have installed the all of necessary softwares on your pc 
+    
+    php server
+    Git
+    composer
+<h2>STEP-02</h2> clone the git repository to the location on your machine that you need to store the application.
+go to that location and open your terminal there and run the git clone command.
+    
+    git clone <repository url>.git
+<h2>STEP-03</h2> Move into the application directory using the cd command: 
+    
+    cd <project-location>
+<h2>STEP-04</h2> Laravel uses Composer for PHP dependency management for that You has to have installed php composer in your directory 
+    
+    composer install
+    (This command will download and install all the required packages specified in the composer.json file.)
+    
+<h2>STEP-05</h2> Duplicate the .env.example file and rename it to .env and open .env file and update database details as
+follows.
+    
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=book-management
+    DB_USERNAME=your_database_username
+    DB_PASSWORD=your_database_passwords   
+    (change DB_DATABASE=book-management,DB_USERNAME=root)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+<h2>STEP-06</h2> Generate application key for project
+    
+    php artisan key:generate
+    (This key is used for encrypting user sessions and other sensitive data)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+<h2>STEP-07</h2> Run database migrations to create tables.
+    
+    php artisan migrate
+    (this will create necessry tables on the database using migrations tables)
+<h2>STEP-07</h2> To run the Laravel development server, use the following command:
+    
+    php artisan serve
+<h4>After successfully following above steps, you can quickly get the project up and running in your local development environment </h4>
+    
 
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

@@ -13,7 +13,17 @@ return new class extends Migration
     {
         Schema::create('gas_requests', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained();
+            $table->foreignId('outlet_id')->constrained();
+            $table->foreignId('delivery_schedule_id')->nullable()->constrained();
+            $table->integer('quantity');
+            $table->enum('status', ['pending', 'approved', 'rejected', 'completed', 'cancelled']);
+            $table->date('expected_pickup_date');
+            $table->date('pickup_deadline');
+            $table->boolean('empty_cylinder_received')->default(false);
+            $table->boolean('payment_received')->default(false);
             $table->timestamps();
+
         });
     }
 

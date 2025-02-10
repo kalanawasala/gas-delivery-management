@@ -11,9 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('business_customers', function (Blueprint $table) {
+        Schema::create('orders', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained();
+            $table->foreignId('outlet_id')->constrained();
+            $table->date('order_date');
+            $table->integer('total_quantity');
+            $table->enum('status', ['pending', 'approved', 'completed', 'cancelled']);
             $table->timestamps();
+
         });
     }
 
@@ -22,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('business_customers');
+        Schema::dropIfExists('orders');
     }
 };

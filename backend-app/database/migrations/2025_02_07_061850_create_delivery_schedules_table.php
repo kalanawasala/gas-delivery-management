@@ -11,9 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tokens', function (Blueprint $table) {
+        Schema::create('delivery_schedules', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('outlet_id')->constrained();
+            $table->date('delivery_date');
+            $table->enum('delivery_status', ['scheduled', 'in_transit', 'completed']);
             $table->timestamps();
+
         });
     }
 
@@ -22,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tokens');
+        Schema::dropIfExists('delivery_schedules');
     }
 };

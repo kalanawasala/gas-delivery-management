@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('stocks', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('outlet_id')->constrained();
+            $table->integer('current_stock');
+            $table->integer('qty_received');
+            $table->integer('qty_remaining');
+            $table->date('stock_date');
             $table->timestamps();
         });
     }

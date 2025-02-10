@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('tokens', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained()->OnDelete('cascade');
+            $table->foreignId('order_id')->constrained();
+            $table->date('request_date');
+            $table->date('expiry_date');
             $table->timestamps();
         });
     }

@@ -13,7 +13,14 @@ return new class extends Migration
     {
         Schema::create('notifications', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('business_customer_id')->constrained();
+            $table->foreignId('user_id')->constrained();
+            $table->text('message');
+            $table->enum('report_type', ['sms', 'email']);
+            $table->enum('status', ['read', 'unread']);
+            $table->date('notification_date');
             $table->timestamps();
+
         });
     }
 

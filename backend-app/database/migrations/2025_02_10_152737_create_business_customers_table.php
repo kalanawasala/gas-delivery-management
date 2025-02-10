@@ -13,12 +13,6 @@ return new class extends Migration
     {
         Schema::create('business_customers', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
-            $table->string('business_name');
-            $table->string('business_registration_no')->unique();
-            $table->string('vat_no')->nullable();
-            $table->text('business_address');
-            $table->string('contact_person');
             $table->timestamps();
         });
     }
